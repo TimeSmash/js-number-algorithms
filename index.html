@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Number Algorithms</title>
+    </head>
+    <body>
+        <h1>JS Number Algorithms</h1>
+
+        <canvas id="myChart" width="20" height="20" style="border: 1px solid black"></canvas>
+        <script src="../node_modules/chart.js/dist/Chart.js"></script>
+        
+        <script>
+            
+            var ctx = document.getElementById('myChart');
+            console.log("CTX",ctx)
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        backgroundColor: [
+                            'rgba(255, 255,255,0.1)',
+                            'rgba(0,0,0,1)',
+                            'rgba(0,0,0,1)',
+                            'rgba(0,0,0,1)',
+                            'rgba(0,0,0,1)',
+                            'rgba(0,0,0,1)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 0, 0, 1)'
+                        ],
+                        color: "black",
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+            </script>
+    </body>
+<html>
