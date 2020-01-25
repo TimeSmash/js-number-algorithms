@@ -5,7 +5,8 @@
 //  The conjecture is that no matter what value of n, the sequence will always reach 1.
 
 function collatzTo1(num){
-	let terms = []
+    let terms = []
+    terms.push(num)
     while(num >1){
 // 		console.log(num)
 		if(num % 2 ===0){
